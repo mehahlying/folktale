@@ -1,12 +1,12 @@
 <meta charset="utf-8">
 h1 { 
-  color: white !important;
+  color: #2ca9e1 !important;
   margin: 0 0 0 15px; 
   padding: 0;
   font-size: 30px;
 }
-h2 { color: white !important }
-h3 { color: white !important } 
+h2 { color: #2ca9e1 !important }
+h3 { color: #2ca9e1 !important } 
 @font-face {
     font-family: "CharisSIL";
     src: url("https://mehahlying.github.io/folktale/CharisSIL-Regular.ttf");  format('ttf');
@@ -22,9 +22,9 @@ h3 { color: white !important }
 body {
   margin: 0;
   padding: 0;
-  color: white; 
-  background: url(bg.jpg);
-  background-color: #2ca9e1;
+  color: black; 
+  /* background: url(bg.jpg); */
+  background-color: white;
   font-family: "游ゴシック", sans-serif;
 }
 header {
@@ -67,8 +67,8 @@ nav {
   padding: 0.5em 1em;
   margin: 2em 0;
   color: black;/*文字色*/
-  background: royalblue;
-  border: solid 2px white;/*線*/
+  background: white;
+  border: solid 2px #2ca9e1;/*線*/
   border-radius: 10px;/*角の丸み*/
 }
 /*
