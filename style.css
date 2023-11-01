@@ -22,11 +22,9 @@ h3 { color: white !important }
 body {
   margin: 0;
   padding: 0;
-  color: white;
-  /* 
-  background: url(berta_hestias.png);
-  */
-  background-color: white;
+  color: white; 
+  background: url(bg.jpg);
+  background-color: #2ca9e1;
   font-family: "游ゴシック", sans-serif;
 }
 header {
@@ -68,9 +66,9 @@ nav {
 .nolf {
   padding: 0.5em 1em;
   margin: 2em 0;
-  color: white;/*文字色*/
+  color: black;/*文字色*/
   background: royalblue;
-  border: solid 3px white;/*線*/
+  border: solid 2px white;/*線*/
   border-radius: 10px;/*角の丸み*/
 }
 /*
