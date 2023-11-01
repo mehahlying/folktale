@@ -20,7 +20,7 @@ h3 { color: #2ca9e1 !important }
   box-sizing: border-box;
 }
 body {
-  margin: 0;
+  margin: 20px;
   padding: 0;
   color: black; 
   /* background: url(bg.jpg); */
