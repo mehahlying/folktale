@@ -1,0 +1,105 @@
+<meta charset="utf-8">
+h1 { 
+  color: white !important;
+  margin: 0 0 0 15px; 
+  padding: 0;
+  font-size: 30px;
+}
+h2 { color: white !important }
+h3 { color: white !important } 
+@font-face {
+    font-family: "CharisSIL";
+    src: url("https://github.com/mehahlying/folktale/blob/main/CharisSIL-Regular.ttf");  format('ttf');
+}
+
+.CharisSIL {
+    font-family: "CharisSIL";
+}
+/* ヘッダー*/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: url(berta_hestias.png);
+  background-color: white;
+  font-family: "游ゴシック", sans-serif;
+}
+header {
+  width: 100%;
+  padding: 30px 4% 10px;
+  position: fixed;
+  background-color: royalblue;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+a { 
+  text-decoration: none;
+  color: white;
+  margin: 0 0 0 15px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+li {
+  margin: 0 0 0 15px;
+  font-size: 14px;
+}
+nav {
+   margin: 0 0 0 auto;
+}
+.logo{
+  width 15px;
+  height 6px;  
+}
+/* 中身*/
+.content {
+  width: auto;
+  height: 100vh;
+  margin: 150px 20px 0 20px;
+}
+.nolf {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: white;/*文字色*/
+  background: royalblue;
+  border: solid 3px white;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+/*
+.guide {
+  display: flex;
+  width:auto;
+  margin: 0 0 0 0;
+}
+.guide_1 {
+  flex-shrink: 0;
+  padding: 80px;
+  height: 300px;
+  width: 25%;
+  margin: 10px 15px 0 15px;
+  background: blue;
+  position: relative;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+}
+*/
+footer {
+  width: 100%;
+  padding: 10px 0 10px;
+  background-color: royalblue;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+.footer { 
+  text-decoration: none;
+  color: white;
+  margin: 10 0 0 0;
+  text-align: center;
+}
