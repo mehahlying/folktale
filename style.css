@@ -92,8 +92,12 @@ nav {
   border-radius: 10px;
 }
 */
+dummy {
+  hight:70px;
+}
 footer {
   width: 100%;
+  hight:50px;
   padding: 10px 0 10px;
   background-color: white;
   position: fixed;
