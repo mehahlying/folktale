@@ -9,7 +9,7 @@ h2 { color: white !important }
 h3 { color: white !important } 
 @font-face {
     font-family: "CharisSIL";
-    src: url("https://github.com/mehahlying/folktale/blob/main/CharisSIL-Regular.ttf");  format('ttf');
+    src: url("https://mehahlying.github.io/folktale/CharisSIL-Regular.ttf");  format('ttf');
 }
 
 .CharisSIL {
