@@ -95,7 +95,7 @@ nav {
 footer {
   width: 100%;
   padding: 10px 0 10px;
-  background-color: royalblue;
+  background-color: white;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -103,7 +103,7 @@ footer {
 }
 .footer { 
   text-decoration: none;
-  color: white;
+  color: black;
   margin: 10 0 0 0;
   text-align: center;
 }
