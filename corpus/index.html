@@ -22,7 +22,7 @@
       <p class="header"><a href="https://mehahlying.github.io/folktale/">トップに戻る</a></p>
     </div>
     <div class="content">
-      <h1>辞書検索</h1>
+      <h1>サンドラヤ語コーパス集</h1>
       <p>　サンドラヤ語の文章を集積してコーパス化していく計画。試行錯誤中。出典、原文、和訳、整理番号（暫定）と続きます。整理番号はそのリンクを踏むと、それが掲載されているページに行く事が出来ます。任意の単語（サンドラヤ語でも日本語でも構いません）で検索すると、それを含む文章が出力されます。</p>
       <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDictionary()">
       <button onclick="searchDictionary()">Exe</button>
@@ -35,7 +35,7 @@
       var corpus = [
         {
           "title": "ストラヴォイナ国王ドヴィルガ2世の演説", 
-          "example": "gì-gəbà-há cùc̬à-sîn phìy mə-swêt-mû lît mə-thû-lò ŋ́-cí ʔə-sâp-tân yàybwìʔôt té-yá-mà.",
+          "example": "sâr-wâ, cùcàtâwʔəbyû-mû sâws̬âŋ hwê-kàŋ-yî tə-myíng-nêy tətétənâ-há cùbyû-hnà-dî nâtàm-lò kùnâ-kû-nâp-cí səkhâwàn tyámhyàngné-lò lât-nâp-yá-mô hmî-mà-yì.",
           "translation": "朕は、人類と国家のもっとも重要な使命とは、民族間の憎しみをなくし、永遠の平和を樹立することであると確信しています。",
           "source": "speech/text1.html",
           "text": "SPC-TXT-01-01",
@@ -46,6 +46,62 @@
           "translation": "この世界は人同士が1枚の板や1個のレンガとなって建てられたライヴィオートのようなものです。",
           "source": "speech/text1.html",
           "text": "SPC-TXT-01-02",
+        },
+        {
+          "title": "ストラヴォイナ国王ドヴィルガ2世の演説",
+          "example": "gì-pà cùbyû mə-byû ŋâp-m̂ kùnâ-ŋ́-hyìn xò-cùbyû dáté ŋwé-ŋwé, mònphâp-ʔî lît-mû kyôk hmêwîn-nâp-cí zə-kèy-sâw-yî cwêng-sí-lò kwín-kwà-myâ-mà-tì.",
+          "translation": "ここである民族が戦争によって滅ぼされると、その民族がどれだけ小さくとも、周囲のレンガや石を巻き込んで、閉じることのできない大穴を開けることとなってしまいます。",
+          "source": "speech/text1.html",
+          "text": "SPC-TXT-01-03",
+        },
+        {
+          "title": "ストラヴォイナ国王ドヴィルガ2世の演説",
+          "example": "gá-jəyáw sâr-wâ sətəyâbânâ təcòtəcáʔènà-m̂ gì-sətəyâbânâ-dî təsò-phê-pà zə-hlwè-yêt-yî tyámhyàngné lât-sî-tì-mô mî-nâp-mà-tì.",
+          "translation": "それ故、朕はストラヴォイナの主権者として、このストラヴォイナの屋根の間に揺らぐことのない平和を樹立することを決心します。",
+          "source": "speech/text1.html",
+          "text": "SPC-TXT-01-04",
+        },
+        {
+          "title": "『ポーヤダタの冒険から学ぶサンドラヤ語』Lesson1",
+          "example": "dənàbà-mà.",
+          "translation": "こんにちは",
+          "source": "mbe/lesson1.html",
+          "text": "MBE-LSN-01-01",
+        },
+        {
+          "title": "『ポーヤダタの冒険から学ぶサンドラヤ語』Lesson1",
+          "example": "dənàbà-mà.",
+          "translation": "こんにちは",
+          "source": "mbe/lesson1.html",
+          "text": "MBE-LSN-01-02",
+        },
+        {
+          "title": "『ポーヤダタの冒険から学ぶサンドラヤ語』Lesson1",
+          "example": "lîŋ sìmâ-wâ dá-bé? xòcìcí dí-wâ yá-mê-yə-bé?",
+          "translation": "お前の名前はなんだ？ そしてどこから来た？",
+          "source": "mbe/lesson1.html",
+          "text": "MBE-LSN-01-03",
+        },
+        {
+          "title": "『ポーヤダタの冒険から学ぶサンドラヤ語』Lesson1",
+          "example": "kəmyâ sìmâ-wâ m̀bê chó-mà-yì. bûbâtûgànâ-wâlèwâ yá-cì-cí.",
+          "translation": "私の名前は「ンベ」です。ブバトゥガンから来ました。",
+          "source": "mbe/lesson1.html",
+          "text": "MBE-LSN-01-04",
+        },
+        {
+          "title": "『ポーヤダタの冒険から学ぶサンドラヤ語』Lesson1",
+          "example": "m̀bê-bá? gìlê-wâ lìŋ sàndəyày-cùbyû-mà. sàndəyàyâ-kày-pà sàndəyàyâ-dî sìmâ-wâ té-mà-yì. ʔún...... lîŋ sìmâ-wâ phòyədâtà-mà.",
+          "translation": "ンベ？　今日からお前はサンドラヤ人だ。サンドラヤではサンドラヤの名前が必要だ。うーん……お前の名前は「ポーヤダタ」だ。",
+          "source": "mbe/lesson1.html",
+          "text": "MBE-LSN-01-05",
+        },
+        {
+          "title": "『ポーヤダタの冒険から学ぶサンドラヤ語』Lesson1",
+          "example": "pâtnì-mà...... byàdàn.",
+          "translation": "わかりました……",
+          "source": "mbe/lesson1.html",
+          "text": "MBE-LSN-01-06",
         }
       ];
     
@@ -65,7 +121,7 @@
             resultElement.innerHTML = '<div class="content"><div class="nolf"><h3>' + item.title + '</h3>' +
               '<p class="CharisSIL">' + item.example + '</p>' +
               '<p>' + item.translation + '</p>' +
-              '<div class="source"><p><a href="https://mehahlying.github.io/folktale/' + item.source + '/">' + 
+              '<div class="source"><p><a href="https://mehahlying.github.io/folktale/' + item.source + ' ">' + 
               item.text + '</a></p></div></div></div>';
             results.appendChild(resultElement);
           }
