@@ -29,7 +29,11 @@
     </div>
   
     <div class="content">
-      <div id="results"></div>
+      <div class="nolf">
+        <div data-gloss>
+          <div id="results"></div>
+        </div>
+      </div>
     </div>
     <script>
       // JSONデータを定義
@@ -60,10 +64,10 @@
               item.translation.toLowerCase().includes(input) ||
               item.source.toLowerCase().includes(input)) {
             var resultElement = document.createElement("p");
-            resultElement.innerHTML = "<div class="nolf"><div data-gloss><p>" + item.example + "</p>" +
+            resultElement.innerHTML = "<p>" + item.example + "</p>" +
               "<p>" + item.gross + "</p>" +
-              "<p>" + item.translation + "</p></div></div>" +
-              "<div class="sourse"><p>" + item.source + "</p></div>";
+              "<p>" + item.translation + "</p>" +
+              "<p>" + item.source + "</p>";
             results.appendChild(resultElement);
           }
         });
