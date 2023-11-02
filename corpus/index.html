@@ -23,18 +23,13 @@
     </div>
     <div class="content">
       <h1>辞書検索</h1>
-      <p>　サンドラヤ語の文章を集積してコーパス化していく計画。試行錯誤中。</p>
+      <p>　サンドラヤ語の文章を集積してコーパス化していく計画。試行錯誤中。1</p>
       <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDictionary()">
       <button onclick="searchDictionary()">Exe</button>
     </div>
-  
-    <div class="content">
-      <div class="nolf">
-        <div data-gloss>
-          <div id="results"></div>
-        </div>
-      </div>
-    </div>
+    
+    <div id="results"></div>
+        
     <script>
       // JSONデータを定義
       var corpus = [
@@ -64,10 +59,10 @@
               item.translation.toLowerCase().includes(input) ||
               item.source.toLowerCase().includes(input)) {
             var resultElement = document.createElement("p");
-            resultElement.innerHTML = "<p>" + item.example + "</p>" +
+            resultElement.innerHTML = "<div class="content"><div class="nolf"><div data-gloss><p>" + item.example + "</p>" +
               "<p>" + item.gross + "</p>" +
               "<p>" + item.translation + "</p>" +
-              "<p>" + item.source + "</p>";
+              "<p>" + item.source + "</p></div></div></div>";
             results.appendChild(resultElement);
           }
         });
