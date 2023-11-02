@@ -11,35 +11,43 @@
     <div id="results"></div>
 
     <script>
-        // JSONデータを外部ファイルから読み込む
-        fetch('./corpus.json')
-            .then(response => response.json())
-            .then(data => {
-                var corpus = data;
+        // JSONデータを定義
+        var corpus = [
+            {
+                "example": "りんご",
+                "gross": "バナナ",
+                "translation": "さくらんぼ",
+                "source": "さくらんぼ"
+            },
+            {
+                "example": "宇宙",
+                "gross": "関暁夫",
+                "translation": "さくらんぼ",
+                "source": "さくらんぼ"
+            }
+        ];
 
-                // 検索関数
-                function searchDictionary() {
-                    var input = document.getElementById("searchInput").value.toLowerCase();
-                    var results = document.getElementById("results");
-                    results.innerHTML = '';
+        // 検索関数
+        function searchDictionary() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var results = document.getElementById("results");
+            results.innerHTML = '';
 
-                    corpus.forEach(function(item) {
-                        if (item.example.toLowerCase().includes(input) ||
-                            item.gross.toLowerCase().includes(input) ||
-                            item.translation.toLowerCase().includes(input) ||
-                            item.source.toLowerCase().includes(input)) {
+            corpus.forEach(function(item) {
+                if (item.example.toLowerCase().includes(input) ||
+                    item.gross.toLowerCase().includes(input) ||
+                    item.translation.toLowerCase().includes(input) ||
+                    item.source.toLowerCase().includes(input)) {
 
-                            var resultElement = document.createElement("p");
-                            resultElement.innerHTML = "<strong>例: </strong>" + item.example + "<br>" +
-                                "<strong>グロス: </strong>" + item.gross + "<br>" +
-                                "<strong>翻訳: </strong>" + item.translation + "<br>" +
-                                "<strong>出典: </strong>" + item.source + "<br>";
-                            results.appendChild(resultElement);
-                        }
-                    });
+                    var resultElement = document.createElement("p");
+                    resultElement.innerHTML = "<strong>例: </strong>" + item.example + "<br>" +
+                                              "<strong>グロス: </strong>" + item.gross + "<br>" +
+                                              "<strong>翻訳: </strong>" + item.translation + "<br>" +
+                                              "<strong>出典: </strong>" + item.source + "<br>";
+                    results.appendChild(resultElement);
                 }
-            })
-            .catch(error => console.error('JSONデータの読み込みに失敗しました:', error));
+            });
+        }
     </script>
 </body>
 </html>
