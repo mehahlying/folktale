@@ -59,10 +59,10 @@
               item.translation.toLowerCase().includes(input) ||
               item.source.toLowerCase().includes(input)) {
             var resultElement = document.createElement("p");
-            resultElement.innerHTML = "<div class="content"><div class="nolf"><div data-gloss><p>" + item.example + "</p>" +
-              "<p>" + item.gross + "</p>" +
-              "<p>" + item.translation + "</p>" +
-              "<p>" + item.source + "</p></div></div></div>";
+            resultElement.innerHTML = '<div class="content"><div class="nolf"><div data-gloss><p>' + item.example + '</p>' +
+              '<p>' + item.gross + '</p>' +
+              '<p>' + item.translation + '</p></div>' +
+              '<div class="source"><p>' + item.source + '</p></div></div></div>';
             results.appendChild(resultElement);
           }
         });
