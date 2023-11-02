@@ -1,11 +1,13 @@
 [
-    {
-    "apple": "りんご",
-    "banana": "バナナ",
-    "cherry": "さくらんぼ",
-    }, {
-    "apple": "りんご",
-    "banana": "宇宙",
-    "cherry": "世界",
-    }, 
+  {
+    "example": "りんご",
+    "gross": "バナナ",
+    "translation": "さくらんぼ",
+    "source": "さくらんぼ",
+  }, {
+    "example": "宇宙",
+    "gross": "関暁夫",
+    "translation": "さくらんぼ",
+    "source": "さくらんぼ",
+  }, 
 ]
