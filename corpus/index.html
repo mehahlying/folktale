@@ -2,57 +2,44 @@
 <html>
 <head>
     <title>辞書検索</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <h1>辞書検索</h1>
-    <input type="text" id="searchInput" placeholder="検索キーワード">
-    <button id="searchButton">検索</button>
+    <input type="text" id="searchInput" placeholder="検索..." onkeyup="searchDictionary()">
+    <button onclick="searchDictionary()">検索</button>
 
-    <div id="results">
-    </div>
+    <div id="results"></div>
 
     <script>
-        $(document).ready(function() {
-            $("#searchButton").click(function() {
-                var searchTerm = $("#searchInput").val().trim();
-                if (searchTerm === "") {
-                    alert("検索キーワードを入力してください");
-                } else {
-                    // corpus.jsonファイルを読み込む
-                    $.getJSON("corpus.json", function(data) {
-                        var results = [];
-                        // データを検索
-                        data.forEach(function(entry) {
-                            if (entry.example.includes(searchTerm) ||
-                                entry.gross.includes(searchTerm) ||
-                                entry.translation.includes(searchTerm) ||
-                                entry.source.includes(searchTerm)) {
-                                results.push(entry);
-                            }
-                        });
-                        // 検索結果を表示
-                        displayResults(results);
+        // JSONデータを外部ファイルから読み込む
+        fetch('./corpus.json')
+            .then(response => response.json())
+            .then(data => {
+                var corpus = data;
+
+                // 検索関数
+                function searchDictionary() {
+                    var input = document.getElementById("searchInput").value.toLowerCase();
+                    var results = document.getElementById("results");
+                    results.innerHTML = '';
+
+                    corpus.forEach(function(item) {
+                        if (item.example.toLowerCase().includes(input) ||
+                            item.gross.toLowerCase().includes(input) ||
+                            item.translation.toLowerCase().includes(input) ||
+                            item.source.toLowerCase().includes(input)) {
+
+                            var resultElement = document.createElement("p");
+                            resultElement.innerHTML = "<strong>例: </strong>" + item.example + "<br>" +
+                                "<strong>グロス: </strong>" + item.gross + "<br>" +
+                                "<strong>翻訳: </strong>" + item.translation + "<br>" +
+                                "<strong>出典: </strong>" + item.source + "<br>";
+                            results.appendChild(resultElement);
+                        }
                     });
                 }
-            });
-        });
-
-        function displayResults(results) {
-            var resultsDiv = $("#results");
-            resultsDiv.empty();
-            if (results.length === 0) {
-                resultsDiv.append("<p>該当する結果がありません。</p>");
-            } else {
-                results.forEach(function(entry) {
-                    var entryHtml = "<p>例: " + entry.example + "</p>" +
-                                    "<p>グロス: " + entry.gross + "</p>" +
-                                    "<p>翻訳: " + entry.translation + "</p>" +
-                                    "<p>出典: " + entry.source + "</p>";
-                    resultsDiv.append(entryHtml);
-                });
-            }
-        }
+            })
+            .catch(error => console.error('JSONデータの読み込みに失敗しました:', error));
     </script>
 </body>
 </html>
