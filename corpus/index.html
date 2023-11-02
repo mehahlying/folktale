@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>辞書検索</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>辞書検索</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-  <h1>辞書検索</h1>
-  <input type="text" id="searchInput" placeholder="検索キーワード">
-  <button id="searchButton">検索</button>
-  
-  <div id="results">
-  </div>
-  
-  <script>
-    $(document).ready(function() {
-      $("#searchButton").click(function() {
-        var searchTerm = $("#searchInput").val().trim();
-        if (searchTerm === "") {
-          alert("検索キーワードを入力してください");
-        } else {
-          // corpus.jsonファイルを読み込む
-          $.getJSON("corpus.json", function(data) {
-            var results = [];
-            // データを検索
-            data.forEach(function(entry) {
-              if (entry.example.includes(searchTerm) ||
-                  entry.gross.includes(searchTerm) ||
-                  entry.translation.includes(searchTerm) ||
-                  entry.source.includes(searchTerm)) {
-                results.push(entry);
-              }
-            });
-            // 検索結果を表
-            displayResults(results);
-          });
-        }
-      });
-    });
+    <h1>辞書検索</h1>
+    <input type="text" id="searchInput" placeholder="検索キーワード">
+    <button id="searchButton">検索</button>
 
-    function displayResults(results) {
-      var resultsDiv = $("#results");
-      resultsDiv.empty();
-      if (results.length === 0) {
-        resultsDiv.append("<p>該当する結果がありません。</p>");
-      } else {
-        results.forEach(function(entry) {
-          var entryHtml = "<p>例: " + entry.example + "</p>" +
-            "<p>グロス: " + entry.gross + "</p>" +
-            "<p>翻訳: " + entry.translation + "</p>" +
-            "<p>出典: " + entry.source + "</p>";
-          resultsDiv.append(entryHtml);
+    <div id="results">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#searchButton").click(function() {
+                var searchTerm = $("#searchInput").val().trim();
+                if (searchTerm === "") {
+                    alert("検索キーワードを入力してください");
+                } else {
+                    // corpus.jsonファイルを読み込む
+                    $.getJSON("corpus.json", function(data) {
+                        var results = [];
+                        // データを検索
+                        data.forEach(function(entry) {
+                            if (entry.example.includes(searchTerm) ||
+                                entry.gross.includes(searchTerm) ||
+                                entry.translation.includes(searchTerm) ||
+                                entry.source.includes(searchTerm)) {
+                                results.push(entry);
+                            }
+                        });
+                        // 検索結果を表示
+                        displayResults(results);
+                    });
+                }
+            });
         });
-      }
-    }
-  </script>
+
+        function displayResults(results) {
+            var resultsDiv = $("#results");
+            resultsDiv.empty();
+            if (results.length === 0) {
+                resultsDiv.append("<p>該当する結果がありません。</p>");
+            } else {
+                results.forEach(function(entry) {
+                    var entryHtml = "<p>例: " + entry.example + "</p>" +
+                                    "<p>グロス: " + entry.gross + "</p>" +
+                                    "<p>翻訳: " + entry.translation + "</p>" +
+                                    "<p>出典: " + entry.source + "</p>";
+                    resultsDiv.append(entryHtml);
+                });
+            }
+        }
+    </script>
 </body>
 </html>
-
