@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>辞書検索</title>
-</head>
-<body>
-  <h1>辞書検索</h1>
-  <input type="text" id="searchInput" placeholder="検索..." onkeyup="searchDictionary()">
-  <button onclick="searchDictionary()">検索</button>
-  
-  <div id="results"></div>
-  <script>
-    // JSONデータを定義
-    var corpus = [
-      {
-        "example": "りんご",
-        "gross": "バナナ",
-        "translation": "さくらんぼ",
-        "source": "さくらんぼ"
-      },
-      {
-        "example": "宇宙",
-        "gross": "関暁夫",
-        "translation": "さくらんぼ",
-        "source": "さくらんぼ"
-      }
-    ];
+  <head>
+    <meta charset="utf-8">
+    <title>サンドラヤ語コーパス集</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/leipzig@latest/dist/leipzig.min.css">
+    <meta name="description" content="サンドラヤ語コーパス集" />
     
-    // 検索関数
-    function searchDictionary() {
-      var input = document.getElementById("searchInput").value.toLowerCase();
-      var results = document.getElementById("results");
-      results.innerHTML = '';
-      
-      corpus.forEach(function(item) {
-        if (item.example.toLowerCase().includes(input) ||
-            item.gross.toLowerCase().includes(input) ||
-            item.translation.toLowerCase().includes(input) ||
-            item.source.toLowerCase().includes(input)) {
-          var resultElement = document.createElement("p");
-          resultElement.innerHTML = "<strong>例: </strong>" + item.example + "<br>" +
-            "<strong>グロス: </strong>" + item.gross + "<br>" +
-            "<strong>翻訳: </strong>" + item.translation + "<br>" +
-            "<strong>出典: </strong>" + item.source + "<br>";
-          results.appendChild(resultElement);
+    <meta property="og:url" content="https://mehahlying.github.io/folktale/" />
+    <meta property="og:title" content="サンドラヤ語コーパス集" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="　サンドラヤ語の文章を集積してコーパス化していく計画。試行錯誤中。" />
+    <meta property="og:image" content="https://mehahlying.github.io/_94b33ea5-19da-4e7e-aa18-e0c6da42ae55.jpg" />
+    <meta name="twitter:card" content="summary_large_imageL" />
+    <meta name="twitter:site" content="@p41Hk" />
+    <meta property="og:site_name" content="サンドラヤ語民話集" />
+    <meta property="og:locale" content="ja_JP" />
+  </head>
+  <body>
+    <div class="content">
+      <p class="header"><a href="https://mehahlying.github.io/folktale/">トップに戻る</a></p>
+    </div>
+    <div class="content">
+      <h1>辞書検索</h1>
+      <p>　サンドラヤ語の文章を集積してコーパス化していく計画。試行錯誤中。</p>
+      <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDictionary()">
+      <button onclick="searchDictionary()">Exe</button>
+    </div>
+  
+    <div class="content">
+      <div id="results"></div>
+    </div>
+    <script>
+      // JSONデータを定義
+      var corpus = [
+        {
+          "example": "りんご",
+          "gross": "バナナ",
+          "translation": "さくらんぼ",
+          "source": "さくらんぼ"
+        },
+        {
+          "example": "宇宙",
+          "gross": "関暁夫",
+          "translation": "さくらんぼ",
+          "source": "さくらんぼ"
         }
-      });
-    }
-  </script>
-</body>
+      ];
+    
+      // 検索関数
+      function searchDictionary() {
+        var input = document.getElementById("searchInput").value.toLowerCase();
+        var results = document.getElementById("results");
+        results.innerHTML = '';
+      
+        corpus.forEach(function(item) {
+          if (item.example.toLowerCase().includes(input) ||
+              item.gross.toLowerCase().includes(input) ||
+              item.translation.toLowerCase().includes(input) ||
+              item.source.toLowerCase().includes(input)) {
+            var resultElement = document.createElement("p");
+            resultElement.innerHTML = "<div class="nolf"><div data-gloss><p>" + item.example + "</p>" +
+              "<p>" + item.gross + "</p>" +
+              "<p>" + item.translation + "</p></div></div>" +
+              "<div class="sourse"><p>" + item.source + "</p></div>";
+            results.appendChild(resultElement);
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
