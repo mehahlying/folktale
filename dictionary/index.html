@@ -27,8 +27,11 @@
       <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDictionary()">
       <button onclick="searchDictionary()">Exe</button>
     </div>
-    
-    <div id="results"></div>
+    <div class="content">
+      <div class="nolf">
+        <div id="results"></div>
+      </div>
+    </div>
         
     <script>
       // JSONデータを定義
@@ -56,7 +59,7 @@
             item.translation.toLowerCase().includes(input) ||
             item.source.toLowerCase().includes(input)) {
             var resultElement = document.createElement("p");
-            resultElement.innerHTML = '<div class="content"><div class="nolf"><p><b  class="CharisSIL">' + item.title + '</b>　' + item.translation + '</p></div></div>';
+            resultElement.innerHTML = '<p><b  class="CharisSIL">' + item.title + '</b> ' + item.translation + '</p>';
             results.appendChild(resultElement);
           }
         });
