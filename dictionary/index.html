@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>サンドラヤ語辞書</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/leipzig@latest/dist/leipzig.min.css">
+    <meta name="description" content="サンドラヤ語辞書" />
+    
+    <meta property="og:url" content="https://mehahlying.github.io/folktale/" />
+    <meta property="og:title" content="サンドラヤ語辞書" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="　サンドラヤ語の辞書です。" />
+    <meta property="og:image" content="https://mehahlying.github.io/_94b33ea5-19da-4e7e-aa18-e0c6da42ae55.jpg" />
+    <meta name="twitter:card" content="summary_large_imageL" />
+    <meta name="twitter:site" content="@p41Hk" />
+    <meta property="og:site_name" content="サンドラヤ語民話集" />
+    <meta property="og:locale" content="ja_JP" />
+  </head>
+  <body>
+    <div class="content">
+      <p class="header"><a href="https://mehahlying.github.io/folktale/">トップに戻る</a></p>
+    </div>
+    <div class="content">
+      <h1>サンドラヤ語辞書</h1>
+      <p>　サンドラヤ語の辞書です。</p>
+      <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDictionary()">
+      <button onclick="searchDictionary()">Exe</button>
+    </div>
+    
+    <div id="results"></div>
+        
+    <script>
+      // JSONデータを定義
+      var corpus = [
+        {
+          "title": "kû", 
+          "translation": "(動) 集める",
+        },
+        {
+          "title": "khû", 
+          "translation": "(動) 集まる",
+        },
+      ];
+      
+      // 検索関数
+      function searchDictionary() {
+        var input = document.getElementById("searchInput").value.toLowerCase();
+        var results = document.getElementById("results");
+        results.innerHTML = '';
+      
+        corpus.forEach(function(item) {
+          if (
+            item.title.toLowerCase().includes(input) ||
+            item.example.toLowerCase().includes(input) ||
+            item.translation.toLowerCase().includes(input) ||
+            item.source.toLowerCase().includes(input)) {
+            var resultElement = document.createElement("p");
+            resultElement.innerHTML = '<div class="content"><div class="nolf"><p><b  class="CharisSIL">' + item.title + '</b>　' + item.translation + '</p></div></div>';
+            results.appendChild(resultElement);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
