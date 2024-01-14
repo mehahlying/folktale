@@ -31,7 +31,7 @@
     <div class="content">
       <h1>文字入力支援ツール</h1>
       <!--<h2>Lesson 1 </h2>-->
-      <textarea id="form" rows="2" cols="60" wrap="off" class="pekepen" style="font-size:20px;"></textarea>
+      <textarea id="form" rows="2" cols="60" wrap="off" class="pekepen" style="font-size:40px;"></textarea>
       <div>
         <input type="button" value="ka" onclick="ka()">
         <input type="button" value="kha" onclick="kha()">
@@ -78,6 +78,44 @@
         <input type="button" value="low" onclick="low()">
         <input type="button" value="high" onclick="high()">
         <input type="button" value="virama" onclick="virama()">
+      </div>
+      <div>
+        <input type="button" value="-ka" onclick="kach()">
+        <input type="button" value="-kha" onclick="khach()">
+        <input type="button" value="-ga" onclick="gach()">
+        <input type="button" value="-hnga" onclick="hngach()">
+        <input type="button" value="-nga" onclick="ngach()">
+        <input type="button" value="-ca" onclick="cach()">
+        <input type="button" value="-cha" onclick="chach()">
+        <input type="button" value="-ja" onclick="jach()">
+        <input type="button" value="-hnya" onclick="hnyach()">
+        <input type="button" value="-nya" onclick="nya()">
+      </div>
+      <div>
+        <input type="button" value="-ta" onclick="tach()">
+        <input type="button" value="-tha" onclick="thach()">
+        <input type="button" value="-da" onclick="dach()">
+        <input type="button" value="-hna" onclick="hnach()">
+        <input type="button" value="-na" onclick="nach()">
+        <input type="button" value="-pa" onclick="pach()">
+        <input type="button" value="-pha" onclick="phach()">
+        <input type="button" value="-ba" onclick="bach()">
+        <input type="button" value="-hma" onclick="hmach()">
+        <input type="button" value="-ma" onclick="mach()">
+      </div>
+      <div>
+        <input type="button" value="-hya" onclick="hyach()">
+        <input type="button" value="-ya" onclick="yach()">
+        <input type="button" value="-hra" onclick="hrach()">
+        <input type="button" value="-ra" onclick="rach()">
+        <input type="button" value="-hla" onclick="hlach()">
+        <input type="button" value="-la" onclick="lach()">
+        <input type="button" value="-hwa" onclick="hwach()">
+        <input type="button" value="-wa" onclick="wach()">
+        <input type="button" value="-sa" onclick="sach()">
+        <input type="button" value="-xa" onclick="xach()">
+        <input type="button" value="-ha" onclick="hach()">
+        <input type="button" value="-ʔa" onclick="qach()">
       </div>
       <div></div>
       <script type="text/javascript">
@@ -199,6 +237,105 @@
         }
         function virama(){
           document.getElementById('form').value+='ら';
+        }
+
+        
+        function kach(){
+          document.getElementById('form').value+='わ';
+        }
+        function khach(){
+          document.getElementById('form').value+='を';
+        }
+        function gach(){
+          document.getElementById('form').value+='ん';
+        }
+        function hngach(){
+          document.getElementById('form').value+='ア';
+        }
+        function ngach(){
+          document.getElementById('form').value+='イ';
+        }
+        function cach(){
+          document.getElementById('form').value+='ウ';
+        }
+        function chach(){
+          document.getElementById('form').value+='エ';
+        }
+        function jach(){
+          document.getElementById('form').value+='オ';
+        }
+        function hnyach(){
+          document.getElementById('form').value+='カ';
+        }
+        function nyach(){
+          document.getElementById('form').value+='キ';
+        }
+        function tach(){
+          document.getElementById('form').value+='ク';
+        }
+        function thach(){
+          document.getElementById('form').value+='ケ';
+        }
+        function dach(){
+          document.getElementById('form').value+='コ';
+        }
+        function hnach(){
+          document.getElementById('form').value+='サ';
+        }
+        function nach(){
+          document.getElementById('form').value+='シ';
+        }
+        function pach(){
+          document.getElementById('form').value+='ス';
+        }
+        function phach(){
+          document.getElementById('form').value+='セ';
+        }
+        function bach(){
+          document.getElementById('form').value+='ソ';
+        }
+        function hmach(){
+          document.getElementById('form').value+='タ';
+        }
+        function mach(){
+          document.getElementById('form').value+='チ';
+        }
+        
+        function hyach(){
+          document.getElementById('form').value+='ツ';
+        }
+        function yach(){
+          document.getElementById('form').value+='テ';
+        }
+        function hrach(){
+          document.getElementById('form').value+='ト';
+        }
+        function rach(){
+          document.getElementById('form').value+='ナ';
+        }
+        function hlach(){
+          document.getElementById('form').value+='ニ';
+        }
+        function lach(){
+          document.getElementById('form').value+='ヌ';
+        }
+        function hwach(){
+          document.getElementById('form').value+='ネ';
+        }
+        function wach(){
+          document.getElementById('form').value+='ノ';
+        }
+        function sach(){
+          document.getElementById('form').value+='フ';
+        }
+        function xach(){
+          document.getElementById('form').value+='ヘ';
+        }
+        function hach(){
+          document.getElementById('form').value+='ホ';
+        }
+        function qach(){
+          document.getElementById('form').value+='マ';
         }
       </script>
       <p class="pekepen">あゆ</p>
