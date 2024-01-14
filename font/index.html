@@ -32,14 +32,31 @@
       <h1>文字入力支援ツール</h1>
       <!--<h2>Lesson 1 </h2>-->
       <textarea id="form" rows="2" cols="60" wrap="off" class="pekepen"></textarea>
-      <input type="button" value="ka" onclick="add()">
-      <input type="button" value="kha" onclick="idd()">
+      <div>
+        <p>子音字</p>
+      </div>
+      <div>
+        <input type="button" value="ka" onclick="ka()">
+        <input type="button" value="kha" onclick="kha()">
+        <input type="button" value="ga" onclick="ga()">
+        <input type="button" value="hnga" onclick="hnga()">
+        <input type="button" value="nga" onclick="hnga()">
+      </div>
       <script type="text/javascript">
-        function add(){
+        function ka(){
           document.getElementById('form').value+='あ';
         }
-        function idd(){
+        function kha(){
           document.getElementById('form').value+='い';
+        }
+        function ga(){
+          document.getElementById('form').value+='う';
+        }
+        function hnga(){
+          document.getElementById('form').value+='え';
+        }
+        function nga(){
+          document.getElementById('form').value+='お';
         }
       </script>
       <p class="pekepen">あゆ</p>
