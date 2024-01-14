@@ -1,4 +1,13 @@
 <meta charset="utf-8">
+@font-face {
+    font-family: "pekepen";
+    src: url("https://mehahlying.github.io/folktale/Pekepen.otf")  format('otf');
+}
+
+.pekepen {
+    font-family: "pekepen";
+}
+
 h1 { 
   color: #2ca9e1 !important;
   margin: 0 0 0 15px; 
