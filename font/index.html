@@ -117,6 +117,15 @@
         <input type="button" value="-ha" onclick="hach()">
         <input type="button" value="-ʔa" onclick="qach()">
       </div>
+      
+      <div>
+        <input type="button" value="、" onclick="kuten()">
+        <input type="button" value="。" onclick="toten()">
+        <input type="button" value="（" onclick="kakko()">
+        <input type="button" value="）" onclick="kakkotoji()">
+        <input type="button" value="「" onclick="kagi()">
+        <input type="button" value="」" onclick="kagitoji()">
+      </div>
       <div></div>
       <script type="text/javascript">
         function ka(){
@@ -337,8 +346,27 @@
         function qach(){
           document.getElementById('form').value+='マ';
         }
+
+        
+        function kuten(){
+          document.getElementById('form').value+='､';
+        }
+        function toten(){
+          document.getElementById('form').value+='｡';
+        }
+        function kakko(){
+          document.getElementById('form').value+='れ';
+        }
+        function kakkotoji(){
+          document.getElementById('form').value+='ろ';
+        }
+        function kagi(){
+          document.getElementById('form').value+='り';
+        }
+        function kagitoji(){
+          document.getElementById('form').value+='る';
+        }
       </script>
-      <p class="pekepen">あゆ</p>
     </div>
 
     <div class="dummy"></div>
